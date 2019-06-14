@@ -1,13 +1,13 @@
 import React from 'react';
 
 const Tab =({ tab, selectTabHandler, selectedTab }) => {
- 
+  console.log(tab)
   return (
     <div
       className={tab ===selectedTab ? 'tab active-tab':'tab'}
       onClick={() => selectTabHandler()}
     >
-      {tab.toUpperCase()}
+      {tab}
     </div>
   );
 };

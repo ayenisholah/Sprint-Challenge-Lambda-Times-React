@@ -2,8 +2,6 @@ import React from 'react';
 import Tab from './Tab';
 import uuid from 'uuid';
 const Tabs = ({ selectTabHandler, selectedTab, tabs }) => {
-
-
   return (
     <div className="tabs">
       <div className="topics">
@@ -21,9 +19,7 @@ const Tabs = ({ selectTabHandler, selectedTab, tabs }) => {
           ))
         }
       </div>
-      <Tab/>
     </div>
-    // <Tab/>
   );
 };
 

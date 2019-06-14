@@ -1,8 +1,9 @@
 import React from 'react';
 import Tab from './Tab';
 import uuid from 'uuid';
-const Tabs = props => {
-  console.log(props)
+const Tabs = ({ selectTabHandler, selectedTab, tabs }) => {
+
+
   return (
     <div className="tabs">
       <div className="topics">
@@ -10,17 +11,19 @@ const Tabs = props => {
         {
           // map over the tabs provided on your props, create a new Tab component for each one.
           // give the tab component a `selectTabHandler`, the `selectedTab`, and the `tab` itself as props
-          props.tabs.map(tab => (
-            <div
+          tabs.map(tab => (
+            <Tab
               key={uuid()}
-              className="tab"
-            >
-              <h3>{tab}</h3>
-            </div>
+              tab={tab}
+              selectTabHandler={selectTabHandler}
+              selectedTab={selectedTab}
+            />
           ))
         }
       </div>
+      <Tab/>
     </div>
+    // <Tab/>
   );
 };
 

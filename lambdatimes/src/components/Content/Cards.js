@@ -21,4 +21,8 @@ const Cards = ({ cards }) => {
 
 // Make sure you include prop types for all of your incoming props
 
+Cards.propTypes = {
+  card: PropTypes.array
+}
+
 export default Cards;
